@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html>
+
+
+<!-- Mirrored from velox.com.ng/accounts/password_reset/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 05 Aug 2022 09:20:27 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+	<META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE">  
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+	<link rel="shortcut icon"href="../../static/favicon.ico">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:normal,100,200,300,400,500,600" rel="stylesheet">
+
+	<script src = "../../static/js/jquery.min6ddc.js?unique=db0ca070-149f-11ed-ac7c-a0369fc7c792"></script>
+	<link href="../../static/css/sign3919.css?unique=db0ca746-149f-11ed-ac7c-a0369fc7c792" rel="stylesheet" />
+	<link href="../../static/css/mycssc5b8.css?unique=db0caca0-149f-11ed-ac7c-a0369fc7c792" rel="stylesheet" />
+	
+	<title>Reset password</title>
+</head>
+
+<body>
+
+	 <div class="logo_tag" style="text-align: center;">
+	 		<a href="../../index.html"><img src="../../static/Images/logo%20black.svg"></a>
+	 </div>
+
+	
+    	
+    	
+    		<form method="POST">
+    			<input type="hidden" name="csrfmiddlewaretoken" value="kv5Xnzrb9ppxXr9FEXw0gKIbdBn4Br7HhTliNrXP044cfwExyogL1MTjTQwaNH8p">
+			    <div class="holder holder-holder">
+
+			    	 <div class="email_tag" style="text-align: center;">
+	 	<a href="#"><img src="../../static/Images/Email%20illustration%20desktop.png"></a>
+	 </div>
+
+
+			    	<div id="msg1-forgot">
+			    		<p id="intro-forgot">
+			    		Enter your email address and we'll send<br> a link to reset your password</p>
+			    		
+			    	</div>
+
+
+				    <!--Email Address Field-->
+				      <label for="email" id="mail" style="color: black;">Email Address</label>
+				      <input type="text" placeholder="example@email.com" name="email" autocomplete="email" maxlength="254" required id="id_email">
+
+				      
+
+
+					<!-- Sign-in button -->
+					<button type="submit" id="sign_btn" onclick="submit()" value="Reset form" style="margin-top: 20px;"><h3>Send link to email</h3></button>
+				</div>
+			</form>
+				 
+ 
+<script >
+function submit(){
+// alert ("Wadup");
+document.getElementById("holder").reset();
+}
+
+
+$("input[type='text']").on("input", function () {    	
+  canChangeColor();
+});
+
+
+function canChangeColor(){  
+  	
+  var can = true;  
+
+  $("input[type='text']").each(function(){
+     if($(this).val()==''){
+        can = false;
+     }
+  });
+  
+  if(can){
+    $('#sign_btn').css({background:'#FF9940'})
+  }else{
+    $('#sign_btn').css({background:'#E0E0E0'})
+  }
+
+}
+</script>
+</body>
+
+
+<!-- Mirrored from velox.com.ng/accounts/password_reset/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 05 Aug 2022 09:20:29 GMT -->
+</html>

@@ -1,0 +1,224 @@
+
+<!DOCTYPE html>
+<html>
+
+
+<!-- Mirrored from velox.com.ng/accounts/register/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 05 Aug 2022 09:20:23 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+  <META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE">  
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon"href="../../static/favicon.ico">
+	<link href="../../static/css/signbc6b.css?unique=da0ef722-149f-11ed-9227-a0369fc7c792" rel="stylesheet" />
+	<link href="../../static/css/mycss172c.css?unique=da0efb82-149f-11ed-9227-a0369fc7c792" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Poppins:normal,100,200,300,400,500,600" rel="stylesheet">
+  <script src="../../static/js/jquery.min7e14.js?unique=da0efef2-149f-11ed-9227-a0369fc7c792"></script>
+	<link rel="stylesheet" href="../../../cdn.jsdelivr.net/npm/bootstrap-icons%401.3.0/font/bootstrap-icons.css" />
+	<title>Sign Up</title>
+</head>
+
+<body>
+	<div class="logo_tag" style="text-align: center;">
+	 	 <a href="../../index.html"><img src="../../static/Images/logo%20black.svg"></a>
+	 </div>
+
+
+	 	<div id="msg1"><h2>Create an account</h2>
+    		<p id="intro">
+    		Already have an account?<a href="../login/index.html" id="link1" style="text-decoration: none; color:#F08B35;"> Sign in</a>	
+    		</p>
+    	</div>
+
+    <div class="holder-form">
+
+    <form method = "POST" class="login100-form validate-form">
+    	<input type="hidden" name="csrfmiddlewaretoken" value="rX9gFjeVVb0d4yvDgcLDP9oplS1bGWC2iHG6xHjyXx7iyc1MSL3Xj0ArTZy6ISqf">
+
+
+    	<div class="form-group-1">
+    		<div id="col-1" class="coll">
+    			<label for="firstname">First Name</label>
+				<input type="text" placeholder="your first name" name="first_name" class="form-control" id="id_first_name">
+				
+    		</div>
+
+    		<div id="col-2" class="coll">
+				<label for="surname">Surname</label>
+				<input type="text" placeholder="your surname"name="surname" class="form-control" id="id_surname">
+			  
+			</div>
+    	</div>
+
+    	<div class="form-group-2">
+    		<div id="col-1" class="coll">
+	    		<label for="email">Email Address</label>
+	    		<input type="text"  name="email" maxlength="255" required id="id_email" placeholder="example@email.com">
+	    	  
+	    	</div>
+
+	    	<div id="col-2" class="coll">
+	    		<label for="phonenumber">Phone Number</label>
+	    		<input type="tel" class="form-control" placeholder= "Phone number" name="phone_number" required id="id_phone_number">
+	    	  
+	    	</div>
+    	</div>
+
+    	<div class="form-group-3">
+    		<div id="col-1" class="coll password-field">
+	    		<label for="password">Password</label>
+
+	    		<input type="password" class="psword" name="password1" placeholder="password" required id="id_password1">
+
+	    		<i class="bi bi-eye-slash toggle-eye-register" id="togglePassword"></i>
+                
+	    		<div class="pw-strength">
+	    			<span class="pw-strength-loader"></span>
+	    			<span class="pw-strength-text"></span>
+        		</div>
+            
+
+        	</div>
+
+	    	<div id="col-2" class="coll">
+	    		<label for="confirmpassword">Confirm Password</label>
+
+	    		<input type="password" name="password2" placeholder="confirm password" required id="id_password2" class="pword" required />
+
+	    		<!-- <span  class="showBtns" style="right: 3%;top: 50%;position: absolute;cursor: pointer;font-weight: bolder;">SHOW</span> -->
+
+	    		<i class="bi bi-eye-slash toggle-eye-register" id="togglePassword2"></i>
+                
+	    		
+
+	    	</div>
+
+    	</div>
+    	<div id="big" class="coll" style="position: relative;">
+    		<label for="referral_id"  style="text-align:left !important; position: absolute; left: 0; top: -20px">Referral ID(Optional)</label>
+    		<input type="text" name="referred_by" placeholder="Enter referral id" class="form-control-1" id="id_referred_by">
+    		
+    	</div>
+
+      <div id="our_terms_n_conditions">
+        <input type="checkbox" name="agree" required="" style="float: left;">
+      <p> I agree to velox <a href="../../terms-and-conditions/index.html">Terms and Conditions</a> and <a href="../../privacy-policy/index.html">Privacy policy</a></p>
+      </div>
+
+    	<div class="form-group">
+    		<button type="submit" id="sign_up_btn" onclick="submit()" value="Reset form" style="display:block;"><h3>Sign up</h3></button>
+    	</div>
+    </form>
+</div>
+
+
+<script src="../../static/js/main4ed8.js?unique=da0f8d86-149f-11ed-9227-a0369fc7c792"></script>
+<script >
+const togglePassword = document.querySelector('#togglePassword');
+const togglePassword2 = document.querySelector('#togglePassword2');
+const password = document.querySelector('#id_password1');
+const password2 = document.querySelector('#id_password2');
+
+togglePassword.addEventListener('click', function (e) {
+    // toggle the type attribute
+    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+    password.setAttribute('type', type);
+    // toggle the eye / eye slash icon
+    this.classList.toggle('bi-eye');
+});
+
+
+
+
+togglePassword2.addEventListener('click', function (e) {
+    // toggle the type attribute
+    const type = password2.getAttribute('type') === 'password' ? 'text' : 'password';
+    password2.setAttribute('type', type);
+    // toggle the eye / eye slash icon
+    this.classList.toggle('bi-eye');
+});
+
+
+
+
+
+function getPasswordStrength(password){
+  let s = 0;
+  if(password.length > 6){
+    s++;
+  }
+  if(password.length > 10){
+    s++;
+  }
+  if(/[A-Z]/.test(password)){
+    s++;
+  }
+  if(/[0-9]/.test(password)){
+    s++;
+  }
+  if(/[^A-Za-z0-9]/.test(password)){
+    s++;
+  }
+  return s;
+}
+document.querySelector("#id_password1").addEventListener("focus",function(){
+  document.querySelector(".pw-strength").style.display = "block";
+});
+document.querySelector("#id_password1").addEventListener("keyup",function(e){
+  let password = e.target.value;
+  let strength = getPasswordStrength(password);
+  let passwordStrengthSpans = document.querySelectorAll(".pw-strength span");
+  strength = Math.max(strength,1);
+  passwordStrengthSpans[1].style.width = strength*20 + "%";
+  if(strength < 2){
+    // passwordStrengthSpans[1].innerText = "Weak";
+    passwordStrengthSpans[1].style.color = "#d13636";
+    passwordStrengthSpans[0].style.background = "#27AE60";
+    passwordStrengthSpans[0].style.width = "25%";
+  } else if(strength >= 2 && strength <= 4){
+    // passwordStrengthSpans[1].innerText = "Medium";
+    passwordStrengthSpans[1].style.color = "#e6da44";
+    passwordStrengthSpans[0].style.background = "#27AE60";
+    passwordStrengthSpans[0].style.width = "50%";
+  } else {
+    // passwordStrengthSpans[1].innerText = "Strong";
+    passwordStrengthSpans[1].style.color = "#d86701";
+    passwordStrengthSpans[0].style.background = "#27AE60";
+    passwordStrengthSpans[0].style.width = "100%";
+  }
+});
+
+
+
+
+$("input[type='text'], input[type='password']").on("input", function () {     
+  canChangeColor();
+});
+
+
+
+function canChangeColor(){  
+    
+  var can = true;
+  var input_fields = [$("#id_first_name"),$("#id_surname"),$("#id_email"),$("#id_phone_number"),$("#id_password1"),$("#id_password2")]
+  input_fields.forEach(function (item) {
+    if(item.val()==''){
+        can = false;
+     }
+  });
+  
+  if(can){
+    $('#sign_up_btn').css({background:'#FF9940'})
+  }else{
+    $('#sign_up_btn').css({background:'#E0E0E0'})
+  }
+
+}
+
+
+</script>
+
+</body>
+
+
+<!-- Mirrored from velox.com.ng/accounts/register/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 05 Aug 2022 09:20:27 GMT -->
+</html>
